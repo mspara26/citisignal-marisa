@@ -54,13 +54,13 @@
 }
 
 .carousel .carousel-slide .carousel-slide-content a:any-link.button {
-  background: black;
+  background: white;
   color: black;
 }
 
 .carousel .carousel-slide.bg-light .carousel-slide-content a:any-link.button {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  background: black;
+  color: white;
 }
 
 .carousel .carousel-slide.bg-light .carousel-slide-content {
