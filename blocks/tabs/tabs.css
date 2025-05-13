@@ -33,7 +33,7 @@
 
 .tabs.block .tabs-list button[aria-selected='true'] {
   border-bottom: 3px solid var(--primary-color);
-  background-color: blue;
+  background-color: black;
   color: white;
   cursor: initial;
 }
