@@ -21,6 +21,29 @@ import {
 import { getProduct, getSkuFromUrl, trackHistory } from './commerce.js';
 import initializeDropins from './dropins.js';
 
+export function makeVideo(element, href) {
+  // Set up the video and its source
+  element.innerHTML = `
+    <video loop muted playsInline>
+      <source data-src="${href}" type="video/mp4" />
+    </video>
+    <button class="play-pause-button">&#10074;&#10074;</button>
+  `;
+
+  const video = element.querySelector('video');
+  const source = element.querySelector('video > source');
+  const playPauseButton = element.querySelector('.play-pause-button');
+
+  source.src = source.dataset.src;
+  video.load();
+
+  // Video loaded event
+  video.addEventListener('loadeddata', () => {
+    video.setAttribute('autoplay', true);
+    video.setAttribute('data-loaded', true);
+    video.play();
+  });
+  
 const LCP_BLOCKS = [
   'product-list-page',
   'product-list-page-custom',
