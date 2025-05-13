@@ -782,18 +782,36 @@
     "id": "card",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "component": "aem-content",
+        "name": "reference",
+        "value": "",
+        "label": "Article",
+        "valueType": "string"
       },
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "select",
+        "name": "cardCategory",
         "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "label": "Category",
+        "valueType": "string",
+        "options": [
+          {
+            "value": "press release",
+            "name": "Press Release"
+          },
+          {
+            "value": "health & wellness",
+            "name": "Health & Wellness"
+          },
+          {
+            "value": "technology & innovation",
+            "name": "Technology & Innovation"
+          },
+          {
+            "value": "perspectives",
+            "name": "Perspectives"
+          }
+        ]
       }
     ]
   },
